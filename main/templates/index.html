@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="generate/" method="POST">
+        {% csrf_token %}
+       <input type="number" name="numb">
+       <div class="form-check">
+        <input name="numbers" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Numbers
+        </label>
+      </div>
+      <div class="form-check">
+        <input name="simvols" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+          Special Simvols
+        </label>
+      </div>
+      <div class="form-check">
+        <input name="" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label name='letter' class="form-check-label" for="flexCheckChecked">
+          Letter
+        </label>
+      </div>
+            <button class="btn btn-primary" type="submit">Generate</button>
+        </form>
+            
+{% endblock %}
